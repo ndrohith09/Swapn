@@ -1,17 +1,17 @@
-##Abstract
+## Abstract
 Predicting a drug's adverse side effects is crucial because they could significantly affect a patient. When a treatment goes beyond treating the intended disease, it results in side effects. The effect can be mild or severe and even fatal. A medicine, surgery, or other type of intervention, such as complementary and alternative therapies, may be used as the treatment. An essential way to guarantee patients can benefit from the significant advantages offered by long-term treatment is to inform patients about the possibility that these adverse events could occur and give instructions prior to treatment to prevent adverse medication reactions.FDA dataste
 
-##Inspiration
+## Inspiration
 Numerous individuals taking daily prescriptions have these adverse side effects as a result of the new medication, dosage, etc. These side effects will have different levels of harmful implications on the patient's body. Although a doctor can anticipate a patient's adverse effects based on an examination of individuals but this is not always possible. What about the other possible side effects which the doctor is not aware of?
  Swapn's goal is to help medical professionals predict the negative side effects of the drugs they give to patients.It can be accomplished with the use of artificial intelligence.
  
-##Problem Statement 
+## Problem Statement 
 Adverse effects of medications are most likely to happen when a person first uses the drug, when they stop using it, or when the dosage changes.What if we could anticipate their adverse side effects based on their current medical prescription which can help them to prevent the side effects?  
 
-##Solution
+## Solution
 We can help the doctor choose a prescribed drug that has fewer or no negative side effects by predicting the adverse side effects of the drug based on its aspects . On uploading the prescription as document the doctor will be able to get the possible adverse side affects of the each particular drug prescribed by him. If a new medication needs to be prescribed, the doctor can do so based on the anticipated side effects and more . This can be achieved by using AWS Comprehend Medical , AWS Textract and Neural Networks. 
 
-##Novelty 
+## Novelty 
 Some drugs can have negative effects in people. Predicting the side effects of these medications beforehand will help prevent serious consequences of any kind. 
 
 ## FlowChart 
@@ -43,13 +43,13 @@ Open FDA Dataset :  https://open.fda.gov/data/downloads/
 Model Dataset : https://drive.google.com/file/d/1er1Ml5x1wAQ1VvYwBkaN7bLKDmKT9I25/view?usp=sharing 
 
 
-##Web Application 
+## Web Application 
 - Frontend -> React JS & Chakra UI
 - Backend -> Fast API 
 - Deep Learning Model -> Pytorch  , AWS
 - Hosting -> AWS 
 
-##Challenges we ran into  
+## Challenges we ran into  
 -We had issues with API integrationg with React JS which was later rectified . 
 -The user interface integration of our deep learning model was
 challenging.
@@ -57,14 +57,14 @@ challenging.
 project.
 -It was interesting to work on with some AWS Services.
 
-##Accomplishments we are proud of : 
+## Accomplishments we are proud of : 
 - We were successful in developing a remarkable approach that can helps to predict the adverse side effects of a drug . 
 - Using AWS Comprehend as well as AWS Textract to process the document was an astetic part
 - Was able to develope a deep learning model using FDA drug dataset.
 - It was amazing to think of creating a web application and using this
 concept.
 
-##What we Learnt : 
+## What we Learnt : 
 - We came across many useful AWS services such as EC2 , Comprehend Medical , Textract and many more .
 - Deep learning model training required a significant amount of time and
 computation power.
@@ -74,7 +74,7 @@ interface.
 - We gained experience using FastApi and gained knowledge of several
 deep learning models.
 
-##Whats next 
+## Whats next 
 - Suggesting medications which has less  or no complications.
 - Giving personalized feeback for each person 
 - By incorporating regional languages the document can be processed in native languages . 
