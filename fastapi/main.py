@@ -69,19 +69,14 @@ async def create_upload_file(file: UploadFile):
             age = int(entity["Text"])    
 
     #make model predictions 
-    # model = joblib.load('model.h5')
-    # prediction = model.predict([age, tablets])
+    model = joblib.load('model.h5')
+    prediction = model.predict([age, tablets])
+    print(prediction) 
 
-    return { 
-        "ZANTAC" : "Colorectal cancer" , 
-        "IBRANCE" : "Blood test abnormal" ,  
-        "OTEZLA" : "Diarrhoea" , 
-        "SIMPONI" : "Colitis ulcerative" , 
-        "GILENYA" : "Muscular weakness" , 
-        "LANTUS" : "Dementia"
-    }
-    # return {"filename": file.filename , "tablets" : tablets , "age" : age }  
-
+    side_effects = {'cough': 1, 'drug ineffective': 2, 'nasopharyngitis': 3, 'product use issue': 4, 'device issue': 5, 'colorectal cancer': 6, 'headache': 7, 'decreased appetite': 8, 'pyrexia': 9, 'nausea': 10, 'pain in extremity': 11, 'alopecia': 12, 'fatigue': 13, 'diarrhoea': 14, 'incorrect dose administered': 15, 'injection site pain': 16, 'wrong technique in product usage process': 17, 'prostate cancer': 18, 'dizziness': 19, 'product use in unapproved indication': 20, 'injection site haemorrhage': 21, 'back pain': 22, 'insomnia': 23, 'asthenia': 24, 'abdominal discomfort': 25, 'hypertension': 26, 'off label use': 27, 'rash': 28, 'pain': 29, 'malaise': 30, 'arthralgia': 31, 'cerebrovascular accident': 32, 'product dose omission issue': 33, 'drug dependence': 34, 'death': 35, 'abdominal pain upper': 36, 'constipation': 37, 'hospitalisation': 38, 'covid-19': 39, 'condition aggravated': 40, 'pruritus': 41, 'vomiting': 42, 'therapy interrupted': 43, 'dyspnoea': 44, 'anxiety': 45, 'weight increased': 46, 'inappropriate schedule of product administration': 47, 'feeling abnormal': 48, 'emotional distress': 49, 'illness': 50, 'fall': 51, 'urinary tract infection': 52, 'pneumonia': 53, 'visual impairment': 54, 'bladder cancer': 55, 'gait disturbance': 56, 'renal cancer': 57, 'weight decreased': 58, 'peripheral swelling': 59, 'no adverse event': 60, 'others': 61}
+    side_effects = {v: k for k, v in side_effects.items()} 
+    print(side_effects[prediction[0]]) 
+    return {"message": side_effects[prediction[0]]} 
 
 
 @app.post("/test")
